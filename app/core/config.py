@@ -12,6 +12,10 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 class Settings(BaseSettings):
     app_name: str = "RepoLens AI"
     database_url: str
+    github_api_version: str = "2026-03-10"
+    github_token: str | None = None
+    gemini_api_key: str
+    ai_model:str =  "gemini-3.8-flash"
 
     github_api_base_url: str = "https://api.github.com"
 
