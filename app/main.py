@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from app.routers.github import router as github_router
 from app.routers.ai_debug import router as ai_debug_router
+from app.routers.analyses import router as analyses_router
 
 app = FastAPI(
     title="RepoLens AI",
@@ -8,6 +9,7 @@ app = FastAPI(
 )
 app.include_router(github_router)
 app.include_router(ai_debug_router)
+app.include_router(analyses_router)
 
 @app.get("/health")
 async def health_check():

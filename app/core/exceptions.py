@@ -18,3 +18,6 @@ class AIServiceError(Exception):
 
 class AIInvalidResponseError(Exception):
     pass
+
+class AnalysisNotFoundError(Exception):
+    pass
